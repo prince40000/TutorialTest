@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package com.prince.tutorial;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
