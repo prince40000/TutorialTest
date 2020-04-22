@@ -2,6 +2,7 @@ package com.prince.tutorial;
 
 import com.prince.tutorial.blocks.FirstBlock;
 import com.prince.tutorial.blocks.ModBlocks;
+import com.prince.tutorial.items.FirstItem;
 import com.prince.tutorial.setup.ClientProxy;
 import com.prince.tutorial.setup.IProxy;
 import com.prince.tutorial.setup.ModSetup;
@@ -64,6 +65,7 @@ public class Tutorial {
             Item.Properties properties = new Item.Properties()
                 .group(setup.itemGroup);
             event.getRegistry().register(new BlockItem(ModBlocks.FIRSTBLOCK, properties).setRegistryName("firstblock"));
+            event.getRegistry().register(new FirstItem());
         }
     }
 }
