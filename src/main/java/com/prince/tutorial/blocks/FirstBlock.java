@@ -9,7 +9,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
@@ -20,7 +19,6 @@ import javax.annotation.Nullable;
 
 public class FirstBlock extends Block {
 
-    static Vec3d vec = null;
 
     public FirstBlock() {
         super(Properties.create(Material.IRON)
@@ -49,8 +47,7 @@ public class FirstBlock extends Block {
     }
 
     public static Direction getFacingFromEntities(BlockPos pos, LivingEntity entity) {
-        vec = entity.getPositionVec();
-        return Direction.getFacingFromVector((vec.getX() -pos.getX()), (vec.getY() -pos.getY()), ((vec.getZ()-pos.getZ())));
+        return Direction.getFacingFromVector((entity.getPosX() -pos.getX()), (entity.getPosY() -pos.getY()), ((entity.getPosZ()-pos.getZ())));
     }
 
     @Override
